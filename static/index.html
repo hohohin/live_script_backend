@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频转录控制</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .control-panel {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .running {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .stopped {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        #transcriptionOutput {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 200px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>音频转录控制面板</h1>
+    
+    <div class="control-panel">
+        <button id="startBtn" onclick="startTranscription()">开始转录</button>
+        <button id="stopBtn" onclick="stopTranscription()">停止转录</button>
+    </div>
+    
+    <div id="status" class="status"></div>
+    
+    <div id="transcriptionOutput"></div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

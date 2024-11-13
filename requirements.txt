@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sounddevice
+numpy
+whisper
+torch
+opencc-python-reimplemented
+python-multipart
+aiofiles
